@@ -12,8 +12,8 @@
         }
       ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "employees_auth_scheme",
-        "AllowedScopes": []
+       // "AuthenticationProviderKey": "employees_auth_scheme", 
+     //   "AllowedScopes": []
       }
     },
     {
