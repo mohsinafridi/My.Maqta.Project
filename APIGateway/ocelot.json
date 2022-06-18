@@ -1,0 +1,63 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/Employee",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Employee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "employees_auth_scheme",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Employee",
+      "UpstreamHttpMethod": [ "Post","Put" ],
+      "DownstreamPathTemplate": "/api/Employee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/Employee/{Id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "/api/Employee/{Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ]
+    },
+
+
+    {
+      "UpstreamPathTemplate": "/Product",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/Product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ]
+
+    }
+  ],
+  "GlobalConfiguration": {
+    //"RequestIdKey": "X-Correlation-Id",
+    "BaseUrl": "https://localhost:5003"
+  }
+}
